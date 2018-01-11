@@ -43,8 +43,6 @@ class UsersPage extends React.Component {
         </ul>
         <div>
           {pages.map((x, i) => {
-            console.log(i)
-            console.log('herere')
             return <button key={i} onClick={() => this.getUsers(i + 1)}>{i + 1}</button>
           })}
         </div>

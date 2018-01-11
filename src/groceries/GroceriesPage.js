@@ -1,19 +1,32 @@
 import React from 'react'
 import _ from 'lodash'
 
-class GroceryItem extends React.Component {
-  render() {
-    const item = this.props.item
+// class GroceryItem extends React.Component {
+//   render() {
+//     const item = this.props.item
 
-    return (
-      <div>
-        {item.name}, Count: {item.count}
-        <button onClick={() => this.props.addQuantity(item.name)}>Add</button>
-        <hr />
-      </div>
-    )
-  }
-}
+//     return (
+//       <div>
+//         {item.name}, Count: {item.count}
+//         <button onClick={() => this.props.addQuantity(item.name)}>Add</button>
+//         <hr />
+//       </div>
+//     )
+//   }
+// }
+
+const GroceryItem = ({ item, addQuantity }) => (
+  <div>
+    {item.name}, Count: {item.count}
+    <button onClick={() => addQuantity(item.name)}>Add</button>
+    <hr />
+  </div>
+)
+
+  
+
+
+
 
 class GroceriesPage extends React.Component {
   constructor(props) {
@@ -43,7 +56,7 @@ class GroceriesPage extends React.Component {
   render() {
     return (
       <main>
-        {this.state.groceries.map((item, i) => {
+        {this.state.groceries.map(item => {
           return <GroceryItem key={item.name} item={item} addQuantity={this.addQuantity} />
         })}
 
