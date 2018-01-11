@@ -1,0 +1,11 @@
+.primary-content {
+  display: flex;
+}
+
+.primary-content aside {
+  width: 200px;
+}
+
+main {
+  flex: 1;
+}
