@@ -1,3 +1,5 @@
+Created for a talk I gave on React
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 After ensuring you have Node and NPM installed:
